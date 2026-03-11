@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# ESG Reporting & Analytics Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Enterprise-grade ESG (Environmental, Social, Governance) reporting system for managing sustainability reports, analytics, and benchmarking.
 
-## Available Scripts
+**Live Demo:**  
+https://esg-reporting-platform-project.vercel.app
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The ESG Reporting Platform is a secure desktop-first web application that allows organizations to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Complete ESG questionnaires
+- Automatically calculate ESG scores
+- View analytics dashboards
+- Receive AI-based recommendations
+- Export reports as editable files (DOCX / Text)
 
-### `npm test`
+All users must be authenticated and access is controlled via role-based permissions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## User Roles
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Administrator
+- Manage users and companies
+- Build questionnaires
+- Configure ESG criteria
+- View all reports and analytics
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Demo:**  
+Email: `admin@esg.com`  
+Password: `admin123`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Respondent
+- Create and complete ESG reports
+- Save drafts and submit reports
+- View dashboards and recommendations
+- Export reports (DOCX / Text)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Demo:**  
+Email: `respondent@company.com`  
+Password: `resp123`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Viewer
+- Read-only analytics access
+- View reports and ESG rankings
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Demo:**  
+Email: `viewer@esg.com`  
+Password: `view123`
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ESG Scoring
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+Question Score = Answer × Weight
+Category Score = Sum of category questions
+Total ESG Score = Weighted average of E, S, G
+```
 
-### Code Splitting
+| Score | Rating |
+|------|------|
+| 90–100 | Excellent |
+| 80–89 | Good |
+| 70–79 | Average |
+| <70 | Needs Improvement |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React 18
+- React Router 7
+- Vite
+- Tailwind CSS 4
+- Radix UI
+- Recharts
+- Lucide React Icons
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Structure
 
-### Advanced Configuration
+```
+src/
+ └── app/
+     ├── components/
+     ├── contexts/
+     ├── pages/
+     │   ├── admin/
+     │   ├── respondent/
+     │   └── viewer/
+     ├── routes.tsx
+     └── App.tsx
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Install dependencies:
 
-### `npm run build` fails to minify
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build production version:
+
+```bash
+npm run build
+```
+
+Preview build:
+
+```bash
+npm run preview
+```
+
+---
+
+## Security
+
+- Authentication required for all routes
+- Role-Based Access Control (RBAC)
+- Reports locked after submission
+- Export restrictions enforced (no PDF)
+
+---
+
+**ESG Reporting Platform — 2026**
