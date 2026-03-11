@@ -10,8 +10,7 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
-  Legend
+  Tooltip
 } from 'recharts';
 import { ScoreCard } from '../../components/ui/ScoreCard';
 

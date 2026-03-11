@@ -14,17 +14,11 @@ import {
 
 type Step = 'setup' | 'environmental' | 'social' | 'governance' | 'review';
 
-interface Answer {
-  questionId: string;
-  value: string | number | string[];
-}
-
 export function ReportWizard() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState<Step>('setup');
   const [company, setCompany] = useState('TechCorp Inc.');
   const [period, setPeriod] = useState('Q1 2026');
-  const [answers, setAnswers] = useState<Answer[]>([]);
 
   const steps: { id: Step; label: string; icon: any; color: string }[] = [
     { id: 'setup', label: 'Setup', icon: Circle, color: 'text-gray-600' },

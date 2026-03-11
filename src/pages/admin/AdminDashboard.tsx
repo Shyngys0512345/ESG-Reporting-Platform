@@ -21,7 +21,6 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-  Legend
 } from 'recharts';
 
 const monthlyData = [

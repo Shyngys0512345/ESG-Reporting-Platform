@@ -7,7 +7,6 @@ import {
   Plus, 
   TrendingUp, 
   Clock, 
-  AlertTriangle,
   Lightbulb,
   ArrowUpRight,
   Calendar

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Building2, Calendar, Eye } from 'lucide-react';
+import { Search, Building2, Calendar, Eye } from 'lucide-react';
 
 interface Report {
   id: string;

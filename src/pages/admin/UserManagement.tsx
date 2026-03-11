@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { 
-  Users, 
   Search, 
   Plus, 
   Shield, 
   User, 
   Eye, 
-  MoreVertical,
   Ban,
   Unlock,
   Trash2,
   Edit
 } from 'lucide-react';
 
-interface User {
+interface PlatformUser {
   id: string;
   name: string;
   email: string;
@@ -23,7 +21,7 @@ interface User {
   lastLogin: string;
 }
 
-const mockUsers: User[] = [
+const mockUsers: PlatformUser[] = [
   { id: '1', name: 'Admin User', email: 'admin@esg.com', role: 'administrator', status: 'active', lastLogin: '2026-03-04' },
   { id: '2', name: 'John Respondent', email: 'respondent@company.com', role: 'respondent', company: 'TechCorp Inc.', status: 'active', lastLogin: '2026-03-03' },
   { id: '3', name: 'Jane Viewer', email: 'viewer@esg.com', role: 'viewer', status: 'active', lastLogin: '2026-03-02' },
@@ -32,7 +30,7 @@ const mockUsers: User[] = [
 ];
 
 export function UserManagement() {
-  const [users, setUsers] = useState<User[]>(mockUsers);
+  const [users] = useState<PlatformUser[]>(mockUsers);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterRole, setFilterRole] = useState<string>('all');
   const [showAddModal, setShowAddModal] = useState(false);
